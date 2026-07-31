@@ -1,3 +1,4 @@
+# pyrefly: ignore [missing-import]
 from sqlalchemy.orm import Session
 
 from models import usuario
@@ -29,7 +30,7 @@ def obtener_usuario_por_id(db: Session, id: int):
     """
     Obtiene un usuario por su ID
     """
-    return db.query(usuario).filter(usuario.id == id).first()
+    return db.query(Usuario).filter(Usuario.id == id).first()
 
 def actualizar_usuario(db: Session, id: int, datos: UsuarioUpdate):
     """

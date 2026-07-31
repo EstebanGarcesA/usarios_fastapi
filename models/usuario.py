@@ -12,5 +12,5 @@ class Usuario(Base):
 
     email = Column(String(255),nullable=False)
 
-    fecha_registro = Column(DateTime,nullable=False)
+ #   fecha_registro = Column(DateTime,nullable=False)
 

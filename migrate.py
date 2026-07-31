@@ -36,9 +36,11 @@ def limpiar_alembic_version():
 # Ejecutar migración automática
 def ejecutar_migracion():
      alembic_cfg = Config("alembic.ini")
+     print(" Aplicando migraciones existentes/pendientes (upgrade head)...")
+     command.upgrade(alembic_cfg, "head")
      print(" Generando revisión autogenerada...")
      command.revision(alembic_cfg, autogenerate=True, message="init usuarios")
-     print(" Aplicando migración (upgrade head)...")
+     print(" Aplicando nueva migración (upgrade head)...")
      command.upgrade(alembic_cfg, "head")
      print("✔ Migración aplicada correctamente.")
 if __name__ == "__main__":
