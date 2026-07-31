@@ -1,0 +1,46 @@
+# Entorno virtual
+.venv/
+venv/
+
+# Variables de entorno
+.env
+
+# Caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos compilados
+*.so
+
+# Alembic
+alembic/versions/*.pyc
+
+# Logs
+*.log
+
+# Archivos de bases de datos locales
+*.sqlite3
+*.db
+
+# Archivos de configuración del IDE
+.vscode/
+.idea/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Caché de pruebas
+.pytest_cache/
+
+# Caché de mypy
+.mypy_cache/
+
+# Caché de Ruff
+.ruff_cache/
+
+# Distribuciones
+build/
+dist/
+*.egg-info/
