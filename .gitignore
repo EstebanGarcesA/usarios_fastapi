@@ -1,0 +1,19 @@
+# Entorno virtual
+venv/
+.venv/
+
+# Variables de entorno
+.env
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+
+# Archivos de bases de datos
+*.sqlite3
+
+# Configuración de VS Code
+.vscode/
+
+# Caché de pytest
+.pytest_cache/
