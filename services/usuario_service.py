@@ -17,7 +17,7 @@ def crear_usuario(db: Session, usuario: Usuario):
     """
     nuevo_usuario = Usuario(
         nombre =usuario.nombre,
-        contrasenha= usuario.contrasenha,
+        #contrasenha= usuario.contrasenha,
         email = usuario.email
     )
 
@@ -43,8 +43,8 @@ def actualizar_usuario(db: Session, id: int, datos: UsuarioUpdate):
 
     if datos.nombre is not None:
         usuario.nombre = datos.nombre
-    if datos.contrasenha is not None:
-        usuario.contrasenha = datos.contrasenha
+#    if datos.contrasenha is not None:
+#       usuario.contrasenha = datos.contrasenha
     if datos.email is not None:
         usuario.email = datos.email
     db.commit()
