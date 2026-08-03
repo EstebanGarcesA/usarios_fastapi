@@ -1,3 +1,4 @@
+# pyrefly: ignore [missing-import]
 from pydantic import BaseModel, Field
 from typing import Optional
 
@@ -5,8 +6,7 @@ from typing import Optional
 
 class UsuarioBase(BaseModel):
     nombre: str = Field(..., min_length=1,max_length=255, description="Nombre de usuario")
-    apellido: str = Field(..., min_length=1,max_length=255, description="Apellido de usuario")
-    contrasenha: str = Field(..., min_length=1,max_length=255, description="Contrasena de usuario")
+#    contrasenha: str = Field(..., min_length=1,max_length=255, description="Contrasena de usuario")
     email: str = Field(..., min_length=1,max_length=255, description="Email de usuario")
 
 class UsuarioCreate(UsuarioBase):
@@ -21,8 +21,7 @@ class UsuarioUpdate(UsuarioBase):
     """
 
     nombre: Optional[str] = Field(None, min_length = 1)
-    apellido: Optional[str] = Field(None, min_length = 1)
-    contrasenha: Optional[str] = Field(None, min_length = 1)
+#    contrasenha: Optional[str] = Field(None, min_length = 1)
     email: Optional[str] = Field(None, min_length = 1)
     pass
 
@@ -33,8 +32,8 @@ class UsuarioRead(BaseModel):
     """
     id: int
     nombre: str
-    apellido: str
-    contrasenha: str
+#    contrasenha: str
+    email: str
     model_config = {
         "from_attributes": True
     }

@@ -8,9 +8,9 @@ class Usuario(Base):
 
     nombre = Column(String(255),nullable=False )
 
-    contrasenha = Column(String(255),nullable=False)
+#   contrasenha = Column(String(255),nullable=False)
 
     email = Column(String(255),nullable=False)
 
-    fecha_registro = Column(DateTime,nullable=False)
+ #   fecha_registro = Column(DateTime,nullable=False)
 
