@@ -1,3 +1,4 @@
+# pyrefly: ignore [missing-import]
 from sqlalchemy.orm import Session
 
 from models import usuario
@@ -16,7 +17,7 @@ def crear_usuario(db: Session, usuario: Usuario):
     """
     nuevo_usuario = Usuario(
         nombre =usuario.nombre,
-        contrasenha= usuario.contrasenha,
+        #contrasenha= usuario.contrasenha,
         email = usuario.email
     )
 
@@ -29,7 +30,7 @@ def obtener_usuario_por_id(db: Session, id: int):
     """
     Obtiene un usuario por su ID
     """
-    return db.query(usuario).filter(usuario.id == id).first()
+    return db.query(Usuario).filter(Usuario.id == id).first()
 
 def actualizar_usuario(db: Session, id: int, datos: UsuarioUpdate):
     """
@@ -42,8 +43,8 @@ def actualizar_usuario(db: Session, id: int, datos: UsuarioUpdate):
 
     if datos.nombre is not None:
         usuario.nombre = datos.nombre
-    if datos.contrasenha is not None:
-        usuario.contrasenha = datos.contrasenha
+#    if datos.contrasenha is not None:
+#       usuario.contrasenha = datos.contrasenha
     if datos.email is not None:
         usuario.email = datos.email
     db.commit()
